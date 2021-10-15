@@ -7,9 +7,9 @@ or `WriteData` NTFS ACL.
 
 A regular `echo "snus" >> file.txt` requires `Write` permissions on the file, and `AppendData` or `WriteData` will not be sufficient for `echo` actions. 
 
-`Invoke-Mosarn` solves this by the C# `System.IO StreamWriter Constructor` to use the 
+`Invoke-Mosarn` solves this by using the C# `System.IO StreamWriter` constructor to utilize 
 `FileSystemRights` class and match the appropriate permission, to successfully 
-modufy the selected file.
+modify the selected file.
 
 ## Examples
 
