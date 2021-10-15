@@ -5,7 +5,7 @@
 When enumerating file permissons on Windows systems you sometimes come by the `AppendData`
 or `WriteData` NTFS ACL.
 
-A regular `echo "snus" >> file.txt` requires `Write` permissions on the file, and `AppendData` or `WriteData` will not be sufficient `echo` actions. 
+A regular `echo "snus" >> file.txt` requires `Write` permissions on the file, and `AppendData` or `WriteData` will not be sufficient for `echo` actions. 
 
 `Invoke-Mosarn` solves this by the C# `System.IO StreamWriter Constructor` to use the 
 `FileSystemRights` class and match the appropriate permission, to successfully 
