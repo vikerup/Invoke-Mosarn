@@ -17,8 +17,7 @@ $f = New-Object -TypeName 'IO.FileStream' `
                               ([IO.FileShare]::Read),`
                               4KB,`
                               ([IO.FileOptions]::None)
-#$f = New-Object -TypeName 'IO.StreamWriter' -ArgumentList $f
-$f = New-Object System.IO.StreamWriter($f)
+$f = New-Object -TypeName 'IO.StreamWriter' -ArgumentList $f
 $f.WriteLine($data2)
 $f.Dispose()
 }
